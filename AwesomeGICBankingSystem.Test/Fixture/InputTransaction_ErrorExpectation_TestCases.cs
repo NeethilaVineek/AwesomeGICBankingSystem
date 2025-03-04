@@ -8,11 +8,8 @@ using System.Threading.Tasks;
 
 namespace AwesomeGICBankingSystem.Test.Fixture
 {
-    public class InputTransaction_ErrorExpectation_TestCases
+    public class InputTransaction_ErrorExpectation_TestCases : Base_Fixture
     {
-        public required string Name { get; set; }
-        public required string Input { get; set; }
-        public required string ExpectedError { get; set; }
 
         public static readonly object[][] TTestData =
         [

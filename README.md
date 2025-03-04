@@ -13,7 +13,7 @@ AwesomeGICBankingSystem is a banking application that allows users to manage acc
 - .NET 8 SDK
 
 ### Installation
-1. Clone the repository : https://github.com/NeethilaVineek/AwesomeGICBankingSystem.git
+1. Clone the repository : git clone https://github.com/NeethilaVineek/AwesomeGICBankingSystem.git
 2. Navigate to the project directory
 3. Build the project
 4. Run the application

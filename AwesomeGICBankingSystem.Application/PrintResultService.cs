@@ -23,7 +23,7 @@ namespace AwesomeGICBankingSystem.Application
 
             foreach (var transaction in transactions)
             {
-                Console.WriteLine($"| {transaction.Date:yyyyMMdd} | {transaction.Id} | {transaction.Type} | {transaction.Amount,7:F2} | {transaction.Balance,7:F2} |");
+                Console.WriteLine($"| {transaction.Date:yyyyMMdd} | {transaction.Id} | {transaction.Type}    | {transaction.Amount,7:F2} | {transaction.Balance,7:F2} |");
             }
 
             if (month.HasValue)
@@ -31,7 +31,7 @@ namespace AwesomeGICBankingSystem.Application
                 var interest = InterestRateService.Calculate(account, month.Value, interestRules);
                 if (interest > 0)
                 {
-                    Console.WriteLine($"| {month.Value:yyyyMM}30 |            | I    | {interest,7:F2} | {account.Balance + interest,7:F2} |");
+                    Console.WriteLine($"| {month.Value:yyyyMM}30 |             | I    | {interest,7:F2} | {account.Balance + interest,7:F2} |");
                 }
             }
         }
@@ -47,6 +47,8 @@ namespace AwesomeGICBankingSystem.Application
         }
         public static void PrintErrors(IEnumerable<string> errors)
         {
+            Console.WriteLine("Please correct the below Error(s):");
+
             foreach (var error in errors)
             {
                 Console.WriteLine(error);

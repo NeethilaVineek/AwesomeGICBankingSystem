@@ -42,7 +42,7 @@ namespace AwesomeGICBankingSystem.Test.Fixture
                         [
                             new InterestRule_Creation_TestCases
                             {
-                                Name = "When Input string is valid - Positive",
+                                Name = "When there is existing rule on the same day - Negative",
                                 Input =  "20230101 RULE01 3.95",
                                 ExpectedRuleId = "RULE01",
                                 ExpectedDate = new DateTime(2023, 1, 1),
